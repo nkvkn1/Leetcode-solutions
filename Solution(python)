@@ -1,0 +1,10 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        travMap = {} #value:index
+
+        for i, n in enumerate(nums):
+            diff = target - n
+            if diff in travMap:
+                return [travMap[diff],i]
+            travMap[n]=i
+        return
